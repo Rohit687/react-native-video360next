@@ -120,6 +120,42 @@ https://github.com/libobjc/SGPlayer
 
 ## TODO
 
-- implement SeekBar in android, it is almost done in the code.. but a soon as i have time ill finish it.
-- complete documentation and javascript interfaces
+- Seekbar for andriod is managed by javascript code to manually added using "DeviceEventEmitter"
+```
+ const [duration, setDuration] = useState({
+    total: 0,
+    current: 0
+  })
+```
+```
+useEffect(() => {
+    let showSubscription = null;
+    if (Platform.OS == 'android') {
+      showSubscription = DeviceEventEmitter.addListener('seekProgressValue', seekProgressValue);
+    }
+
+    return () => {
+     
+      if (showSubscription) {
+        showSubscription.remove();
+      }
+     }
+
+  }, [])
+```
+```
+const seekProgressValue = (event) => {
+
+    if (duration.current != event.progress) {
+      setDuration({
+        total: event.total - 1,
+        current: event.progress
+      })
+    }
+
+    if (event.isComplete) {
+     //--You can close the modal
+    }
+};
+```
 
