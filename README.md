@@ -119,7 +119,7 @@ https://github.com/libobjc/SGPlayer
 
 
 ## TODO
-
+For Android you will have to design manually slider.
 - Seekbar for andriod is managed by javascript code to manually added using "DeviceEventEmitter"
 ```
  const [duration, setDuration] = useState({
