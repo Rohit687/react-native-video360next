@@ -1,6 +1,38 @@
 # react-native-video360next
 
-React Native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android, this plugin was tested using react native 0.61
+To Support Android 0.31 supported
+### android/build.gradle
+- Add line above "allprojects"
+def REACT_NATIVE_VERSION = new File(['node', '--print',"JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
+
+- Add "configurations.all", "jcenter()" and "jcenter" inside "allprojects"
+jcenter() 
+configurations.all {
+    resolutionStrategy {
+        force "com.facebook.react:react-native:" + REACT_NATIVE_VERSION 
+    }
+}
+jcenter() {
+  content {
+    includeModule("com.yqritc", "android-scalablevideoview")
+  }
+}
+
+### android/app/build.gradle 
+- Add "packagingOptions" into "android"
+ packagingOptions {
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/arm64-v8a/libfbjni.so'
+        pickFirst 'lib/armeabi-v7a/libfbjni.so'
+        pickFirst 'lib/x86/libfbjni.so'
+        pickFirst 'lib/x86_64/libfbjni.so'
+    }
+
+
+React Native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android, this plugin was tested using react native 0.70
 
 [![360](https://raw.githubusercontent.com/davichoso/react-native-video360/master/360.png "360")](https://raw.githubusercontent.com/davichoso/react-native-video360/master/360.png "360")
 
@@ -10,7 +42,7 @@ or
 `yarn add react-native-video360next`
 
 ### Notes
-- This component was tested in React Native 0.61 with automatic linking, but I think that it should work in older versions linking manually.
+- This component was tested in React Native 0.70 with automatic linking, but I think that it should work in older versions linking manually.
 - don't forget to run 'pod install' in iOS folder
 	cd ios && pod install
 - in Android test in a real device or android Q simulator I don't know but VR SDK fails in a lot of simulators but not in real devices.
