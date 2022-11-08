@@ -124,4 +124,4 @@ https://github.com/libobjc/SGPlayer
 - complete documentation and javascript interfaces
 
 
-Questions? davichoso@gmail.com
+Questions? rohitkumarmodi92@gmail.com
