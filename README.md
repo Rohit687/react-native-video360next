@@ -3,9 +3,12 @@
 To Support Android 0.31 supported
 ### android/build.gradle
 - Add line above "allprojects"
+```
 def REACT_NATIVE_VERSION = new File(['node', '--print',"JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
+```
 
 - Add "configurations.all", "jcenter()" and "jcenter" inside "allprojects"
+```
 jcenter() 
 configurations.all {
     resolutionStrategy {
@@ -17,9 +20,11 @@ jcenter() {
     includeModule("com.yqritc", "android-scalablevideoview")
   }
 }
+```
 
 ### android/app/build.gradle 
 - Add "packagingOptions" into "android"
+```
  packagingOptions {
         pickFirst 'lib/x86/libc++_shared.so'
         pickFirst 'lib/arm64-v8a/libc++_shared.so'
@@ -30,7 +35,7 @@ jcenter() {
         pickFirst 'lib/x86/libfbjni.so'
         pickFirst 'lib/x86_64/libfbjni.so'
     }
-
+```
 
 React Native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android, this plugin was tested using react native 0.70
 
