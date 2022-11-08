@@ -1,0 +1,35 @@
+{
+  "name": "react-native-video360plugin",
+  "title": "React Native Video360 plugin",
+  "version": "1.0.6",
+  "description": "A react native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android alos supported 31 api version",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohit687/react-native-video360next.git",
+    "baseUrl": "https://github.com/Rohit687/react-native-video360next"
+  },
+  "keywords": [
+    "react-native",
+    "video 360 player",
+    "360 video",
+    "video 3d",
+    "plugin",
+    "video360",
+    "video360next"
+  ],
+  "author": {
+    "name": "Rohit Kumar Modi",
+    "email": "rohitkumarmodi92@gmail.com"
+  },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.59.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.8.3",
+    "react-native": "^0.59.10"
+  }
+}
