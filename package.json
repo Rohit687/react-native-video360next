@@ -1,7 +1,7 @@
 {
   "name": "react-native-video360next",
   "title": "React Native Video360 next",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "A react native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android alos supported 31 api version",
   "main": "index.js",
   "repository": {
