@@ -1,4 +1,4 @@
-//  Created by davichoso@gmail.com
+//  Created by rohitkumarmodi92@gmail.com
 
 #import "PlayerManager.h"
 #import "Video360.h"

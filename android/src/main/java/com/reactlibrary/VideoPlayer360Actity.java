@@ -22,7 +22,7 @@ import androidx.annotation.Nullable;
 
 
 /**
- * Created by davichoso@gmail.com on 22-09-18.
+ * Created by rohitkumarmodi92@gmail.com on 22-09-18.
  */
 
 public class VideoPlayer360Actity extends Activity {

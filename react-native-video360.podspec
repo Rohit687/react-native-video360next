@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/github_account/react-native-video360"
   s.license      = "MIT"
   # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.authors      = { "David" => "davichoso@gmail.com" }
+  s.authors      = { "David" => "rohitkumarmodi92@gmail.com" }
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/github_account/react-native-video360.git", :tag => "#{s.version}" }
  

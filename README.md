@@ -39,7 +39,7 @@ jcenter() {
 
 React Native module to play 360 videos, using the SGPlayer for iOS, and Google VR for Android, this plugin was tested using react native 0.70
 
-[![360](https://raw.githubusercontent.com/davichoso/react-native-video360/master/360.png "360")](https://raw.githubusercontent.com/davichoso/react-native-video360/master/360.png "360")
+[![360](https://raw.githubusercontent.com/Rohit687/react-native-video360next/master/360.png "360")](https://raw.githubusercontent.com/Rohit687/react-native-video360next/master/360.png "360")
 
 ## Getting started
 `npm i react-native-video360next --save`
@@ -123,5 +123,3 @@ https://github.com/libobjc/SGPlayer
 - implement SeekBar in android, it is almost done in the code.. but a soon as i have time ill finish it.
 - complete documentation and javascript interfaces
 
-
-Questions? rohitkumarmodi92@gmail.com
